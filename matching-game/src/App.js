@@ -6,15 +6,16 @@ function App() {
   const [cardsChosen, setCardsChosen] = useState([]);
   const [cardsChosenId, setCardsChosenId] = useState([]);
   const [cardsWon, setCardsWon] = useState([]);
-  const [resultDisplay, setResultDisplay] = useState('');
-  const [difficultyLevel, setDifficultyLevel] = useState(4); // Default difficulty
+  const [difficultyLevel, setDifficultyLevel] = useState(6); // Default difficulty
 
   useEffect(() => {
     createBoard();
   }, [difficultyLevel]); // Re-create board on difficulty change
 
   const createBoard = () => {
-    cardArray.sort(() => 0.5 - Math.random());
+    const selectedCards = cardArray.slice(0, difficultyLevel);
+    const duplicatedCards = [...selectedCards, ...selectedCards]; // Duplicate cards for pairs
+    duplicatedCards.sort(() => 0.5 - Math.random());
     setCardsChosen([]);
     setCardsChosenId([]);
     setCardsWon([]);
@@ -34,11 +35,10 @@ function App() {
   }, [cardsChosen]);
 
   const checkForMatch = () => {
-    const optionOneId = cardsChosenId[0];
-    const optionTwoId = cardsChosenId[1];
+    const [optionOneId, optionTwoId] = cardsChosenId;
     if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match');
-      setCardsWon([...cardsWon, cardsChosen]);
+      setCardsWon([...cardsWon, ...cardsChosen]);
     } else {
       alert('Sorry, try again');
     }
@@ -46,43 +46,41 @@ function App() {
     setCardsChosenId([]);
   };
 
-  // Define the difficulty class based on the selected difficulty level
-  let difficultyClass;
-  if (difficultyLevel === 4) {
-    difficultyClass = 'easy';
-  } else if (difficultyLevel === 6) {
-    difficultyClass = 'medium';
-  } else if (difficultyLevel === 8) {
-    difficultyClass = 'hard';
-  } else if (difficultyLevel === 12) {
-    difficultyClass = 'advanced';
-  }
-
+  const difficultyOptions = [
+    { value: 6, label: 'Easy' },
+    { value: 12, label: 'Medium' },
+    { value: 18, label: 'Hard' },
+    { value: 24, label: 'Advanced' },
+  ];
 
   return (
     <div className="App">
       <h3>Score: {cardsWon.length}</h3>
-      <div className={`grid ${difficultyClass}`}>
+      <div className="grid">
         <label>Select Difficulty Level: </label>
-        <select value={difficultyLevel} onChange={(e) => setDifficultyLevel(parseInt(e.target.value))}>
-          <option value={4}>Easy</option>
-          <option value={6}>Medium</option>
-          <option value={8}>Hard</option>
-          <option value={12}>Advanced</option>
+        <select
+          value={difficultyLevel}
+          onChange={(e) => setDifficultyLevel(parseInt(e.target.value))}
+        >
+          {difficultyOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
         </select>
       </div>
-      <div className='grid'>
+      <div className="grid">
         {cardArray.slice(0, difficultyLevel).map((card, index) => (
           <img
             key={index}
             src={card.img}
-            alt='Card'
+            alt="Card"
             data-id={index}
             onClick={() => flipCard(index)}
           />
         ))}
       </div>
-      {cardsWon.length === cardArray.slice(0, difficultyLevel).length / 2 && (
+      {cardsWon.length === difficultyLevel / 2 && (
         <div>
           <p>Congratulations! You won them all!</p>
         </div>
