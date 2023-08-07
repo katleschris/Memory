@@ -1,28 +1,28 @@
 export const cardArray = [
     {
-      name: 'Lady in a hat',
-      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/24/247559758eb20e46aabdff7e60e340133af1b544.jpg'
+      name: 'NaTzzi',
+      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/70/7033ed373770935d3da112a655808f08bb0c899b_full.jpg'
     },
     {
-        name: 'Lady in a hat',
-        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/24/247559758eb20e46aabdff7e60e340133af1b544.jpg'
+        name: 'NatTzzi',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/70/7033ed373770935d3da112a655808f08bb0c899b_full.jpg'
+      },
+    
+    {
+        name: 'Courage',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/007474c70ed2c55a893c9e65dfc222fef6721157_full.jpg'
+      },
+      {
+        name: 'Courage',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/007474c70ed2c55a893c9e65dfc222fef6721157_full.jpg'
       },
     {
-      name: 'Cookie Chomper',
-      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/4d/4d6f9f7cff5d2ace8a19393403d5410243a5acc6.jpg'
+      name: 'Gun',
+      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/57/57d76910b2b7b15c9687d27c8f2d72c1e4a1be26_full.jpg'
     },
     {
-
-        name: 'Cookie Chomper',
-        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/4d/4d6f9f7cff5d2ace8a19393403d5410243a5acc6.jpg'
-      },
-    {
-      name: 'Royal Cow',
-      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/63/631eb2abb25ce00dce6382a883c50c3a15e18d55.jpg'
-    },
-    {
-        name: 'Royal Cow',
-        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/63/631eb2abb25ce00dce6382a883c50c3a15e18d55.jpg'
+        name: 'Gun',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/57/57d76910b2b7b15c9687d27c8f2d72c1e4a1be26_full.jpg'
       },
     {
       name: 'Kitty kiss',
@@ -61,10 +61,43 @@ export const cardArray = [
       img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/e3/e31afa6bc0a7d0a329a229c3547156598cd3e37d_full.jpg'
     },
     {
-
         name: 'Kermit',
         img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/e3/e31afa6bc0a7d0a329a229c3547156598cd3e37d_full.jpg'
-      }
+    },
+    {
+        name: 'Money',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8d/8d1778b904cf43175f687bd8f3e895e72e958357_full.jpg'
+    },
+    {
+        name: 'Money',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8d/8d1778b904cf43175f687bd8f3e895e72e958357_full.jpg'
+    },
+
+    {
+        name: 'Bugs',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/0040e1ac9ed6b695781d2fa4e94352f55724dd00_full.jpg'
+    },
+    {
+        name: 'Bugs',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/0040e1ac9ed6b695781d2fa4e94352f55724dd00_full.jpg'
+    },
+    {
+        name: 'Handy Many',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/001ff550a5e3c395f333e05ec98ba7b09d42cc9c_full.jpg'
+    },
+    {
+        name: 'Handy Many',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/001ff550a5e3c395f333e05ec98ba7b09d42cc9c_full.jpg'
+    },
+    {
+        name: 'Angel',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/fe/fe069bd5cfef900c33f527f0919ffbd7d8249261_full.jpg'
+    },
+    {
+        name: 'Angel',
+        img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/fe/fe069bd5cfef900c33f527f0919ffbd7d8249261_full.jpg'
+    },
+
 
 
   ];
