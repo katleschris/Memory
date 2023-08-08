@@ -7,7 +7,7 @@ function App() {
   const [cardsChosen, setCardsChosen] = useState([]);
   const [cardsChosenId, setCardsChosenId] = useState([]);
   const [cardsWon, setCardsWon] = useState([]);
-  const [difficultyLevel, setDifficultyLevel] = useState(6); // Default difficulty
+  const [difficultyLevel, setDifficultyLevel] = useState(3); // Default difficulty
   const backSrc = 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/74/74a89444d616571954a1e84780e94619ce79e848_full.jpg';
 
   useEffect(() => {
@@ -66,10 +66,10 @@ function App() {
   };
 
   const difficultyOptions = [
-    { value: 6, label: 'Easy' },
-    { value: 12, label: 'Medium' },
-    { value: 18, label: 'Hard' },
-    { value: 24, label: 'Advanced' },
+    { value: 3, label: 'Easy' },
+    { value: 6, label: 'Medium' },
+    { value: 9, label: 'Hard' },
+    { value: 12, label: 'Advanced' },
   ];
 
   return (
