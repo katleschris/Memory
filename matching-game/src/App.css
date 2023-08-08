@@ -17,15 +17,15 @@
 }
 
 .grid.medium {
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .grid.hard {
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .grid.advanced {
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
 /* Style for the card images */

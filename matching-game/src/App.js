@@ -1,19 +1,32 @@
+/**
+ * React component representing a memory matching game.
+ *
+ * @component
+ */
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { cardArray } from './images';
 
+/**
+ * Represents the main application component.
+ *
+ * @returns {JSX.Element} The JSX element representing the App component.
+ */
 function App() {
-  const [cards, setCards] = useState([]);
-  const [cardsChosen, setCardsChosen] = useState([]);
-  const [cardsChosenId, setCardsChosenId] = useState([]);
-  const [cardsWon, setCardsWon] = useState([]);
-  const [difficultyLevel, setDifficultyLevel] = useState(3); // Default difficulty
+  const [cards, setCards] = useState([]); // Array of card objects
+  const [cardsChosen, setCardsChosen] = useState([]); // Array of chosen cards
+  const [cardsChosenId, setCardsChosenId] = useState([]); // Array of IDs of chosen cards
+  const [cardsWon, setCardsWon] = useState([]); // Array of cards that have been matched
+  const [difficultyLevel, setDifficultyLevel] = useState(3); // Current difficulty level
   const backSrc = 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/74/74a89444d616571954a1e84780e94619ce79e848_full.jpg';
 
-  useEffect(() => {
-    createBoard();
-  }, [difficultyLevel]); // Re-create board on difficulty change
-
+  /**
+   * Create a card object.
+   *
+   * @param {string} imgUrl - The URL of the card image.
+   * @param {number} index - The unique identifier for the card.
+   * @returns {Object} The card object.
+   */
   const createCard = (imgUrl, index) => {
     return {
       img: imgUrl,
@@ -22,6 +35,9 @@ function App() {
     };
   };
 
+  /**
+   * Create a new game board based on the current difficulty level.
+   */
   const createBoard = () => {
     const selectedCards = cardArray.slice(0, difficultyLevel);
     const duplicatedCards = [...selectedCards, ...selectedCards]; // Duplicate cards for pairs
@@ -33,6 +49,15 @@ function App() {
     setCardsWon([]);
   };
 
+  useEffect(() => {
+    createBoard();
+  }, [difficultyLevel]); // Re-create board on difficulty change
+
+  /**
+   * Flip a card when clicked.
+   *
+   * @param {number} cardId - The ID of the card being flipped.
+   */
   const flipCard = (cardId) => {
     if (!cards[cardId].isFlipped && cardsChosen.length < 2) {
       const updatedCards = [...cards];
@@ -50,6 +75,9 @@ function App() {
     }
   }, [cardsChosen]);
 
+  /**
+   * Check if the chosen cards form a match.
+   */
   const checkForMatch = () => {
     const [optionOneId, optionTwoId] = cardsChosenId;
     if (cardsChosen[0].img === cardsChosen[1].img) {
@@ -109,4 +137,5 @@ function App() {
 }
 
 export default App;
+
 
