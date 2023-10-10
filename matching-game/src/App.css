@@ -1,31 +1,92 @@
-.App {
-  text-align: center;
-  margin-top: 50px;
+/* App.css */
+.app-container {
+  position: relative; /* Relative positioning for child elements */
+  top: 0;
 }
 
+.app-content {
+  /* Styles for your app's content */
+  text-align: center;
+  padding: 20px;
+  color: white;
+  border-radius: 10px; /* Example border radius */
+  z-index: 1; /* Ensure the app content is above the background */
+}
+
+/* Style the Background component as needed */
+/* App.css or your CSS file */
+.score-animation {
+  animation: score 3s ease-in-out;
+}
+
+@keyframes score {
+  0% {
+    transform: scale(1);
+    color: white;
+  }
+ 25% {
+    transform: scale(1.2);
+    color: green;
+    box-shadow: 3px;
+  }
+  50% {
+    transform: scale(1.3);
+    color: #00b3ff;
+    box-shadow: 3px;
+  }
+  75% {
+    transform: scale(1.2);
+    color: green;
+    box-shadow: 3px;
+  }
+  100% {
+    transform: scale(1);
+    color: white;
+    
+  }
+}
+
+.label-spacing {
+  margin-bottom: 10px; /* Adjust the margin-bottom value to control the spacing */
+}
+.select-spacing {
+  margin-bottom: 10px; /* Adjust the margin-bottom value to control the spacing */
+}
+
+.grid-top{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 400px;
+  margin: 0 auto;
+}
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default for all levels */
-  grid-gap: 10px;
-  max-width: 400px; /* Adjust as needed */
+  grid-gap: 20px;
   margin: 0 auto;
+  max-width: 400px;
 }
 
 /* Styles for different difficulty levels */
 .grid.easy {
   grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr); 
 }
 
 .grid.medium {
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); 
 }
 
 .grid.hard {
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr); 
+  max-width: fit-content;
 }
 
 .grid.advanced {
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr); 
+  max-width: fit-content;
 }
 
 /* Style for the card images */
