@@ -20,7 +20,6 @@ function App() {
   const [cardsWon, setCardsWon] = useState([]); // Array of cards that have been matched
   const [difficultyLevel, setDifficultyLevel] = useState(3); // Current difficulty level
   const [gridClass, setGridClass] = useState('easy'); // Current difficulty class
-  const [scoreAnimationClass, setScoreAnimationClass] = useState('');
 
   const backSrc = 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/74/74a89444d616571954a1e84780e94619ce79e848_full.jpg';
 
@@ -115,27 +114,15 @@ function App() {
     { value: 9, label: 'Hard' },
     { value: 12, label: 'Advanced' },
   ];
-  
-   // Function to trigger the score animation
-  useEffect(() => {
-    const triggerScoreAnimation = () => {
-      setScoreAnimationClass('score-animation');
-
-      // Reset the animation class after a brief delay
-      setTimeout(() => {
-        setScoreAnimationClass('');
-      }, 100); // Adjust the delay as needed
-    };
-
-    // Call the triggerScoreAnimation function whenever cardsWon.length changes
-    triggerScoreAnimation();
-  }, [cardsWon.length]); 
 
   return (
     <div className="app-container">
       <div className="app-content">
         <h1>Test your Memory</h1>
-        <h3 className={`score ${scoreAnimationClass}`}>Score: {cardsWon.length / 2}</h3>
+        <h3 className={`score ${cardsChosen.length === 2 && cardsChosen[0].img === cardsChosen[1].img ? 'matched' : ''}`}>
+          Score: {cardsWon.length / 2}
+        </h3>
+
         <div className="grid-top">
           <label className="label-spacing">Select Difficulty Level: </label>
           <select  className="select-spacing" 

@@ -1,10 +1,4 @@
-body {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-canvas {
+.display {
     position: fixed;
     top: 0;
     left: 0;
