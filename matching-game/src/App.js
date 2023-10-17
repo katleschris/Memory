@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { cardArray } from './images';
 import Background from './Background';
+import Fireworks from './Fireworks';
 
 /**
  * Represents the main application component.
@@ -37,7 +38,13 @@ function App() {
       id: index,
     };
   };
-
+  
+  const difficultyOptions = [
+    { value: 3, label: 'Easy' },
+    { value: 6, label: 'Medium' },
+    { value: 9, label: 'Hard' },
+    { value: 12, label: 'Advanced' },
+  ];
   /**
    * Create a new game board based on the current difficulty level.
    */
@@ -107,13 +114,9 @@ function App() {
     setCardsChosen([]);
     setCardsChosenId([]);
   };
+ 
+  const fireworkColors = ['#FF5733', '#33FF57', '#5733FF', '#FF33C7', '#33FFF4'];
 
-  const difficultyOptions = [
-    { value: 3, label: 'Easy' },
-    { value: 6, label: 'Medium' },
-    { value: 9, label: 'Hard' },
-    { value: 12, label: 'Advanced' },
-  ];
 
   return (
     <div className="app-container">
@@ -152,10 +155,13 @@ function App() {
       {cardsWon.length/2 === difficultyLevel && (
         <div>
           <p>Congratulations! You found them all!</p>
+          <Fireworks colors={fireworkColors} />
         </div>
       )}
-      
     </div>
+    {cardsWon.length/2 === difficultyLevel && (
+          <Fireworks colors={fireworkColors} />
+      )}
     <Background />
     </div>
     

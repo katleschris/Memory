@@ -10,7 +10,7 @@
   padding: 20px;
   color: white;
   border-radius: 10px; /* Example border radius */
-  z-index: 1; /* Ensure the app content is above the background */
+  z-index: 2; /* Ensure the app content is above the background */
 }
 
 @keyframes score {
@@ -102,4 +102,5 @@
   color: green; /* Change the color when a match is found */
   transform: scale(1.2); /* Scale the score to create a zoom effect */
 }
+
 

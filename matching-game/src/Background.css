@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     background-color: #001600;
-    z-index: -1; /* Place the background behind the content */
+    z-index: -2; /* Place the background behind the content */
   }
   .wrapper,
   .wrapper-2,
