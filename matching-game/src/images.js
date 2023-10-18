@@ -1,7 +1,7 @@
 export const cardArray = [
     {
-      name: 'NaTzzi',
-      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/70/7033ed373770935d3da112a655808f08bb0c899b_full.jpg'
+      name: 'Angry Onion',
+      img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/01/014b854fe59da510c5475ceaf06637623e85d01c_full.jpg'
     },
     {
         name: 'Courage',
