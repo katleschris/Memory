@@ -57,7 +57,7 @@ select{
 .grid.hard,
 .grid.advanced {
   grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(5, 1fr); 
   max-width: fit-content;
 }
 /* Style for the card images */
