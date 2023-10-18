@@ -97,9 +97,9 @@ function App() {
     <div className="app-container">
       <div className="app-content">
         <h2>Test your Memory</h2>
-        <h5 className={`score ${cardsChosen.length === 2 && cardsChosen[0].img === cardsChosen[1].img ? 'matched' : ''}`}>
+        <h6 className={`score ${cardsChosen.length === 2 && cardsChosen[0].img === cardsChosen[1].img ? 'matched' : ''}`}>
           Score: {cardsWon.length / 2}
-        </h5>
+        </h6>
         <div className="grid-top">
           <label className="label-spacing">Select Difficulty Level: </label>
           <select className="select-spacing" value={difficultyLevel} onChange={(e) => setDifficultyLevel(parseInt(e.target.value))}>

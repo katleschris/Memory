@@ -22,6 +22,12 @@
   margin-bottom: 5px; /* Adjust the margin-bottom value to control the spacing */
   margin-top: 5px;
 }
+select{
+  background-color:honeydew;
+  color: black;
+  height: 30px;
+  margin-left: 10px;
+}
 
 .grid-top{
   display: grid;
