@@ -1,5 +1,3 @@
-Sure, here's an example README.md file for the memory matching game:
-
 # Memory Matching Game
 
 A simple memory matching game built with React, where players flip cards to find matching pairs.
