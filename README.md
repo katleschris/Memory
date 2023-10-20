@@ -10,7 +10,6 @@ A simple memory matching game built with React, where players flip cards to find
 - [Usage](#usage)
 - [Technologies](#technologies)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
