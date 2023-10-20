@@ -131,7 +131,7 @@ function App() {
         </div>
         {cardsWon.length / 2 === difficultyLevel && (
           <div>
-            <p>Congratulations! You found them all!</p>
+            <p>Congratulations! You found them all !</p>
             <Fireworks colors={fireworkColors} />
           </div>
         )}
