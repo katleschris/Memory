@@ -76,6 +76,7 @@ select{
   max-width: 100px; /* Adjust as needed */
   max-height: 100px; /* Adjust as needed */
   cursor: pointer;
+  border-radius: 10px;
 }
 
 /* score animation */
