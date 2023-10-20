@@ -52,8 +52,16 @@ function App() {
     } else if (difficultyLevel === 9) {
       newGridClass = 'hard';
     } else if (difficultyLevel === 12) {
-      newGridClass = 'advanced';
+      // Check screen width to decide whether to apply "hide-advanced" class
+      if (window.innerWidth < 375) { // 375px is the width of an iPhone X
+        newGridClass = 'hide-advanced';
+        // Display an alert to inform the user
+        alert('Advanced level is not available on this device.');
+      } else {
+        newGridClass = 'advanced';
+      }
     }
+    
     setGridClass(newGridClass);
   };
 

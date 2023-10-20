@@ -9,9 +9,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: #001600;
+    height: 100vh;
+    background: linear-gradient(black, white);
     z-index: -2; /* Place the background behind the content */
+    overflow-x: hidden;
   }
   .wrapper,
   .wrapper-2,
@@ -104,3 +105,9 @@
       0 0 200px rgba(221, 39, 69, 0.281), 0 0 200px rgba(221, 30, 71, 0.6),
       0 0 200px rgba(219, 20, 47, 0.8), 0 0 200px rgb(209, 33, 33);
   }
+  /*devices smaller than the iPhone X*/
+@media (max-width: 375px) {
+  .hide-advanced {
+    display: none;
+  }
+}

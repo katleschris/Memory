@@ -46,6 +46,5 @@ export const cardArray = [
     {
         name: 'Angel',
         img: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/fe/fe069bd5cfef900c33f527f0919ffbd7d8249261_full.jpg'
-    },
-
-  ];
+    }
+  ]

@@ -3,6 +3,9 @@
   position: relative; /* Relative positioning for child elements */
   top: 0;
   padding: 10px;
+  overflow-x: hidden;
+  height: 100vh;
+  margin: 0;
 }
 
 .app-content {
@@ -11,10 +14,11 @@
   padding: 10px;
   color: white;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90vh;
   border-radius: 10px; /* Example border radius */
   z-index: 2; /* Ensure the app content is above the background */
   margin: 0 auto; /* Center the content horizontally */
+  overflow-x: hidden;
 }
 
 .label-spacing, 
@@ -54,10 +58,15 @@ select{
   grid-template-columns: repeat(3, 1fr); 
 }
 
-.grid.hard,
+.grid.hard {
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); 
+  max-width: fit-content;
+}
+
 .grid.advanced {
   grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(4, 1fr); 
   max-width: fit-content;
 }
 /* Style for the card images */
