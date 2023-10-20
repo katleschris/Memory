@@ -14,7 +14,7 @@ A simple memory matching game built with React, where players flip cards to find
 
 ## Demo
 
-Check out the live demo of the game [here](https://65310173e3ac751309da954b--startling-travesseiro-0d774b.netlify.app/).
+Check out the live demo of the game [here](https://eloquent-gaufre-127807.netlify.app/).
 
 ## Features
 
