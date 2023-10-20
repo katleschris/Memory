@@ -1,3 +1,13 @@
+/* Hide the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Hide the horizontal scrollbar */
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 /* Styles for h2 element */
 h2 {
   font-family: 'Lora', serif; /* Apply the "Lora" font */
@@ -33,7 +43,7 @@ h2 {
   border-radius: 10px; /* Example border radius */
   z-index: 2; /* Ensure the app content is above the background */
   margin: 0 auto; /* Center the content horizontally */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Styles for elements with classes 'label-spacing' and 'select-spacing' */
@@ -133,5 +143,6 @@ p {
 @media (min-width: 885px) and (max-height: 799px) {
   .grid.advanced {
     grid-template-columns: repeat(6, 1fr); /* Set to 6 columns */
+    
   }
 }

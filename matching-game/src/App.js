@@ -30,7 +30,7 @@ function App() {
   const difficultyOptions = [
     { value: 3, label: 'Easy' },
     { value: 6, label: 'Medium' },
-    { value: 9, label: 'Hard' },
+    { value: 10, label: 'Hard' },
     { value: 12, label: 'Advanced' },
   ];
 
@@ -49,7 +49,7 @@ function App() {
     let newGridClass = 'easy';
     if (difficultyLevel === 6) {
       newGridClass = 'medium';
-    } else if (difficultyLevel === 9) {
+    } else if (difficultyLevel === 10) {
       newGridClass = 'hard';
     } else if (difficultyLevel === 12) {
       // Check screen width to decide whether to apply "hide-advanced" class
@@ -141,5 +141,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
