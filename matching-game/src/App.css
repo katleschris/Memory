@@ -89,4 +89,15 @@ select{
   transform: scale(1.2); /* Scale the score to create a zoom effect */
 }
 
+@media (min-width: 885px) {
+  .grid.hard,
+  .grid.advanced {
+    grid-template-columns: repeat(5, 1fr); /* Set to 5 columns */
+  }
+}
 
+@media (min-width: 885px) and (max-height: 799px) {
+  .grid.advanced {
+    grid-template-columns: repeat(6, 1fr); /* Set to 6 columns */
+  }
+}
